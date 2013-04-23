@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnDiscover"
+        android:layout_alignRight="@+id/btnEnableDiscover"
+        android:layout_below="@+id/messageTxt" >
+
+    </ListView>
+
+    
+    
+    <Button
+        android:id="@+id/btnDiscover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Discover" />
+    
+    <Button
+        android:id="@+id/btnEnableDiscover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btnDiscover"
+        android:layout_alignParentBottom="true"
+        android:text="Enable" />
+    
+    <Button
+        android:id="@+id/btnServer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btnEnableDiscover"
+        android:layout_alignParentBottom="true"
+        android:text="Server" />
+
+    <ListView
+        android:id="@+id/chatList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnServer"
+        android:layout_alignLeft="@+id/btnServer"
+        android:layout_below="@+id/progressBar1"
+        android:layout_toLeftOf="@+id/progressBar1" >
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/messageTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btnServer" >
+
+    </EditText>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/message" />
+
+    <Button
+        android:id="@+id/sendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/messageTxt"
+        android:layout_alignBottom="@+id/messageTxt"
+        android:layout_toRightOf="@+id/btnServer"
+        android:text="Send" />
+
+</RelativeLayout>
